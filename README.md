@@ -44,9 +44,9 @@ CREATE TABLE member_table (
 CSS FROM: https://startbootstrap.com/template/shop-item
 
 ## My contribution
-Modified UI to use easier.
-Designed Database Structure and connect to website.
-Implemented CRUD(Crete,Read,Update,Delete) functions using Mysql database.
+- Modified UI to use easier.
+- Designed Database Structure and connect to website.
+- Implemented CRUD(Crete,Read,Update,Delete) functions using Mysql database.
 
 ## Where can I get more help, if I need it?
 If you need more help, please send email to `chochegksdud@handong.ac.kr`
