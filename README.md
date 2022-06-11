@@ -1,16 +1,14 @@
-# 2022-1 Open-source Software Laboratories Final project
+# 2022-1 Open-source Software Laboratories Final project 
+## Handong Global University 21800681 Hanyoug Jeong (정한영)
 
 ## What does this project do?
-For this I implemented functions called CRUD.
-It means, Create, read, update, and delete
-For the Diary, I used mysql database, php, and apache2 open source software
-
+I made web diary with functions called CRUD.
+For the Diary, I used Mysql database, php, and apache2 open source software.
 
 ## Why is this project useful?
 1.Using a web server, user can easily create a diary anytime, anywhere rather than a paper diary.
 2.UI is intuitive. I made this easy to use.
 3.It is free. It made using only opensource software, so it doesn't cost any money.
-
         
 ## How do I get started?
 1. Install libraries.
@@ -44,10 +42,12 @@ CREATE TABLE member_table (
 
 
 ## References
-
+CSS FROM: https://startbootstrap.com/template/shop-item
 
 ## My contribution
-
+Modified UI to use easier.
+Designed Database Structure and connect to website.
+Implemented CRUD(Crete,Read,Update,Delete) functions using Mysql database.
 
 ## Where can I get more help, if I need it?
 If you need more help, please send email to `chochegksdud@handong.ac.kr`
