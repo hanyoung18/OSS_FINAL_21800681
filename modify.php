@@ -19,7 +19,7 @@
 
 #content {
    border-radius: 5px;
-   border: burlywood 2px solid;
+   border: 2px solid;
    /* background-color: rgb(255, 235, 211); */
    font-size: medium;
    font-family: "Noto Sans KR", sans-serif;
@@ -95,45 +95,23 @@ td {
 }
 </style>
 </head>
-<script>
-   function delete_ok(id) {
-      var a = confirm("정말로 삭제하시겠습니까?");
-      if (a)
-         location.href = "deleteok/" + id;
-   }
-</script>
 <body>
    <div class="header">
-      <div class="title">Share Daily Life</div>
-      <div class="buttons">
-         <button class="btn" type="button" onclick="location.href='add.php'">
-            새글쓰기</button>
-         <button class="btn" type="button">
-      </div>
+      <h1> Modify Diary</h1>
    </div>
-
    <div class="w3-content">
-      <c:forEach items="${list}" var="u">
+   <form action="modify_ok.php" method ="get">
          <div class="w3-row w3-margin">
-            <div class="w3-container" id="content">
-               <h2>${u.title}</h2>
-               <p style="height: 28px">
-               <table>
-
-               </table>
-               </p>
-               <div id="main">${u.content}</div>
-               <p id="bottom">
-                  <button type="button" class="btn" id="right"
-                  onclick="location.href='editform/${u.seq}'">
-                  수정하기</button>
-                  <button type="button" class="btn" id="right"
-                  onclick="javascript:delete_ok('${u.seq}')">
-                     삭제하기</button>
-               </p>
-            </div>
+            <input type="hidden" name="seq" value= <?php echo $_GET['seq'];?>>
+               <div class="w3-container" id="content">
+                  title: <textarea name="title" rows="1" cols="25"><?php echo $_GET['title'];?></textarea>
+                  weather: <textarea name="weather" rows="1" cols="15"><?php echo $_GET['weather']; ?></textarea>
+                  usr_name: <textarea name="usr_name" rows="1" cols="15" ><?php echo $_GET['usr_name'];?></textarea>
+               </div>
+            <textarea name="diary" rows="10" cols="75"><?php echo $_GET['diary']; ?></textarea>
+            <button type="submit">수정</button>       
          </div>
-      </c:forEach>
+   </form>
    </div>
 </body>
 </html>

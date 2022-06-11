@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>My diary</title>
         <link href="css/styles.css" rel="stylesheet" />
+        <h1>My diary</h1>
     </head>
     <body>
         <!-- Navigation-->
@@ -41,23 +41,40 @@
                     <!-- <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." /></div> -->
                     <div class="col-md-6">
                         <div class="small mb-1">
-                        <a href="#"> <?php echo $row['usr_name'];?> </a>
+                        <?php echo $row['usr_name'];?>
                         </div>
                         <h1 class="display-5 fw-bolder">
                             <?php echo $row['title'];?> </span>
                         </h1>
                         <div class="fs-5 mb-5">
-                        <?php echo $row['weather'];?> </span>
+                        <?php echo $row['weather'];
+                        echo"   ";
+                        echo $row['date']?>
+                        </span>
                         </div>
                         <p class="lead">
                             <?php echo $row['diary'];?>
                         </p>
+
                         <div class="d-flex">
-                        <!-- <input class="btn btn-outline-dark flex-shrink-0" type="button" onclick="deleteme(<?php echo $row['id']; ?>)"> -->
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <form name = "del" method="GET" action="./delete.php">
+                            <input type="hidden" name="seq" value= <?php echo $row['seq'];?>>
+                            <button class="btn btn-outline-dark flex-shrink-0" type="submit">
                                 Delete
                             </button>
-                        </div>
+                        </form>
+                        <form name = "modi" method="GET" action="./modify.php">
+                            <input type="hidden" name="seq" value= <?php echo $row['seq'];?>>
+                            <input type="hidden" name="diary" value= <?php echo $row['diary'];?>>
+                            <input type="hidden" name="weather" value= <?php echo $row['weather'];?>>
+                            <input type="hidden" name="title" value= <?php echo $row['title'];?>>
+                            <input type="hidden" name="usr_name" value= <?php echo $row['usr_name'];?>>
+                            <button class="btn btn-outline-dark flex-shrink-0" type="submit">
+                                    Modify
+                            </button>
+                
+                        </form>
+                        
                     </div>
                 </div>
             </div>
@@ -68,14 +85,4 @@
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; hanyoung's Website 2022</p></div>
         </footer>
         </body>
-    <script>
-        <?php>
-        function delete_diary($seq) {
-            echo "<?=$row['seq']?>";
-            // $query = "DELETE FROM member_table WHERE ID = $seq";
-            // echo $query;
-            // mysqli_query($con, $query);
-        }
-        ?>
-    </script>
 </html>

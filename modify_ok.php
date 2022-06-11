@@ -3,9 +3,9 @@
   $weather = $_GET['weather'];
   $usr_name = $_GET['usr_name'];
   $diary = $_GET['diary'];
-  $today = date("Y/m/d");
+  $seq = $_GET['seq'];
   include 'connection.php';
-  $query = "INSERT INTO member_table (title, weather, usr_name,diary, date) VALUES ('$title','$weather','$usr_name','$diary','$today')";
+  $query = "UPDATE member_table SET title= '$title', weather= '$weather', usr_name ='$usr_name', diary = '$diary',date= '$date' WHERE seq =$seq";
   $run = $con -> query($query);
   echo("<script>location.href='index.php';</script>");
 ?>

@@ -99,7 +99,7 @@ td {
 </script>
 <body>
    <div class="header">
-      <h1> Share Daily Life</h1>
+      <h1>Today's Daily Life</h1>
    </div>
 
    <div class="w3-content">
