@@ -1,4 +1,4 @@
-# 2022-1 Open-source Software Laboratories Final project Hanyoug Jeong (정한영)
+# 2022-1 Open-source Software Laboratories Final project 정한영
 
 ## What does this project do?
 I made web diary with functions called CRUD.
