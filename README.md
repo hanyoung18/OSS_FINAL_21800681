@@ -5,9 +5,9 @@ I made web diary with functions called CRUD.
 For the Diary, I used Mysql database, php, and apache2 open source software.
 
 ## Why is this project useful?
-1.Using a web server, user can easily create a diary anytime, anywhere rather than a paper diary.
-2.UI is intuitive. I made this easy to use.
-3.It is free. It made using only opensource software, so it doesn't cost any money.
+1. Using a web server, user can easily create a diary anytime, anywhere rather than a paper diary.
+2. UI is intuitive. I made this easy to use.
+3. It is free. It made using only opensource software, so it doesn't cost any money.
         
 ## How do I get started?
 1. Install libraries.
